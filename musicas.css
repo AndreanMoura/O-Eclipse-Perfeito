@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background:
+    linear-gradient(135deg, rgba(14, 14, 15, 0.8), rgba(58, 58, 90, 0.8)),
+    url('img/download (52).jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #eee;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 60px; /* espaço para o botão fixo */
+}
+
+.container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffd700;
+  text-shadow: 0 0 8px #000;
+  margin-bottom: 30px;
+}
+
+.musicas {
+  list-style: none;
+  padding: 20px;
+  margin: 0;
+  font-size: 1.2rem;
+  background: rgba(20, 20, 35, 0.75);
+  border-radius: 12px;
+  box-shadow: 0 0 15px #222244aa;
+  text-align: left;
+}
+
+.musicas li {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #444;
+}
+
+.musicas li:last-child {
+  border-bottom: none;
+}
+
+.musicas a {
+  color: #ffd700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.musicas a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.voltar {
+  position: fixed;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #222244cc;
+  padding: 10px 25px;
+  border-radius: 50px;
+  font-weight: 700;
+  color: #ffd700;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 0 10px #ffdd0077;
+  user-select: none;
+  z-index: 9999;
+  transition: background 0.3s, color 0.3s;
+}
+
+.voltar:hover {
+  background: #ffd700;
+  color: #222244;
+  box-shadow: 0 0 12px #ffd700ee;
+}

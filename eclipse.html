@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>O Eclipse Perfeito</title>
+  <link rel="stylesheet" href="eclipse.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>O início</h1>
+    <div class="date">18 de maio de 2025 — 16:13</div>
+    <div id="countdown" class="countdown">Carregando...</div>
+
+    <div class="content-row">
+      <div class="text">
+        <p>🌗 Nossa História<br />
+        Nós nos conhecemos do nada, como um instante roubado do tempo,<br />
+        uma surpresa do universo que ninguém esperava.<br /><br />
+        Ela, a Lua, com sua luz calma e doce, chegou silenciosa, cheia de mistérios e força sutil.<br />
+        Ele, o Sol, quente e intenso, meio doido, protetor e apaixonado desde o primeiro olhar.<br /><br />
+        E naquele encontro inesperado, como o céu que de repente abraça o dia e a noite,<br />
+        formamos o eclipse perfeito, um momento raro, onde tudo faz sentido.<br /><br />
+        Não havia espaço para erros, só para a dança lenta e natural do amor que nasce<br />
+        quando duas forças opostas se encontram e se completam.<br /><br />
+        Ela trouxe a calma que acalma, ele trouxe o fogo que aquece.<br />
+        Ela, a brisa suave e o campo de rosas, ele, a tempestade de sentimento e a luz incansável.<br /><br />
+        Juntos, descobrimos que a distância entre o dia e a noite não existe quando se olha com o coração.<br />
+        Que o brilho verdadeiro não precisa de plateia, e que o amor, quando é real, resiste até mesmo às fases mais difíceis.<br /><br />
+        Somos o encontro do sol e da lua, a união da força e da delicadeza,<br />
+        o eclipse que o universo pintou para ser perfeito.<br /><br />
+        E assim seguimos, lado a lado, quentes e calmos, loucos e serenos,<br />
+        sempre prontos para iluminar um ao outro, porque quando o sol encontra a lua… acontece amor.</p>
+      </div>
+
+      <div class="images">
+        <img src="img/nós - 1.jpg" alt="Imagem 1 da Lua" />
+        <img src="img/nós -2 .jpg" alt="Imagem 2 da Lua" />
+        <img src="img/nós -3 .jpg" alt="Imagem 3 da Lua" />
+      </div>
+    </div>
+
+    <div class="video-container">
+      <video src="video/Vídeo do WhatsApp de 2025-06-14 à(s) 17.55.20_65a253e0.mp4" autoplay muted loop playsinline></video>
+    </div>
+  </div>
+
+  <a href="index.html" class="voltar">← Voltar</a>
+
+  <script>
+    const countdownElement = document.getElementById("countdown");
+    const targetDate = new Date("2025-05-18T16:13:00-03:00");
+
+    function padZero(num) {
+      return num.toString().padStart(2, '0');
+    }
+
+    function updateCountdown() {
+      const now = new Date();
+      const diffMs = targetDate - now;
+
+      if (diffMs <= 0) {
+        countdownElement.textContent = "O eclipse começou!";
+        return;
+      }
+
+      const totalSeconds = Math.floor(diffMs / 1000);
+      const totalMinutes = Math.floor(totalSeconds / 60);
+      const totalHours = Math.floor(totalMinutes / 60);
+      const days = Math.floor(totalHours / 24);
+
+      const hours = totalHours % 24;
+      const minutes = totalMinutes % 60;
+      const seconds = totalSeconds % 60;
+
+      const totalHoursAll = (days * 24) + hours;
+
+      countdownElement.textContent = 
+        `Dias: ${days} | Horas totais: ${totalHoursAll} | Minutos: ${padZero(minutes)} | Segundos: ${padZero(seconds)}`;
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+</body>
+</html>
